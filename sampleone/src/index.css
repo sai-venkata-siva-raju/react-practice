@@ -1,0 +1,18 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.card{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 150px;
+}
+
+.navbar{
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
