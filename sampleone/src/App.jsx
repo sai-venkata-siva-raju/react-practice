@@ -1,6 +1,12 @@
 import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 function App() {
+  function buttonClick() {
+    alert("Button clicked!");
+  }
+  function handlechange(event){
+    alert("Search User button clicked");
+  }
   const user = [{
     name: "John",
     age: 30,
@@ -20,9 +26,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {user.map((user,index)=>{
-        return <Card key={index} user={user} />
-      })}
+      <button className="btn" onClick={buttonClick}>Add User</button>
+      <br/>
+      <button className="btn" onClick={()=>{
+        alert("Delete User button clicked");
+      }}>Delete User</button>
+      <input type="text" placeholder="Search User" onChange={handlechange} />
+     
     </div>
   );
 }
